@@ -1,0 +1,5 @@
+docker build -t test .
+docker container run -it -v ${pwd}/code:/code/ test php read.php
+
+docker container run -it -v ${pwd}/каталог_где_лежит:/code/ test php файл.php
+docker container run -it -v ${pwd}/php-cli/code:/code/ test composer dump-autoload
