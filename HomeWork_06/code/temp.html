@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <p>
+        Информация о сиситеме
+        web-server    :   {{web_srv}}
+        php version   :   {{php_info}}
+        user browoser : {{user_br}}
+    </p>
+
+    <ul id="navigation">
+        {% for user in users %}
+            <li>
+                <a href="/user/show/?id={{user.getUserId()}}">
+                    {{ user.getUserName() }}
+                    {{ user.getUserLastName() }}. День рождения:
+                    {{ user.getUserBirthday() | date('d.m.Y') }}</a>
+                    <button name="rename_btn" type="button">Rename</button>
+                    <button name="delete_btn">Delete</button>
+            </li>
+
+        {% endfor %}
+    </ul>
+
+    <h1>
+        current_time
+    </h1>
+    <header>
+
+    </header>
+    <footer>
+
+    </footer>
+    <main>
+
+    </main>
+    <p>
+        {{ settings_patch }}
+    </p>
+</div>
+</body>
+</html>

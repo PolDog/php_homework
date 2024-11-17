@@ -51,6 +51,9 @@ class Application
                     []
                 );
             } else {
+                header($_SERVER["SERVER_PROTOCOL"]." 404",true,404);
+                include("page404.html");
+                die();
                 return "Метод не существует";
             }
         } else {

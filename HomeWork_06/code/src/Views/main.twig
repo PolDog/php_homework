@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+		<header>
+			{% include content_header_name %}
+		</header>
+		<main>
+			<h2>
+				{{ current_time }}
+			</h2>
+			{% include content_template_name %}
+
+		</main>
+		<footer>
+			{% include content_footer_name %}
+		</footer>
+	</body>
+</html>
