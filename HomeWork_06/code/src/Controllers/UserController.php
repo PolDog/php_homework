@@ -71,7 +71,6 @@ class UserController
         if(User::exists($_GET['id'])) {
             $user = new User();
             $user->setUserId($_GET['id']);
-            
             $arrayData = [];
             // if(isset($_GET['id']))
                 // $arrayData['user_id'] = $_GET['id'];
@@ -81,7 +80,6 @@ class UserController
             if(isset($_GET['lastname'])) {
                 $arrayData['user_lastname'] = $_GET['lastname'];
             }
-            
             $user->updateUser($arrayData,$_GET['id']);
         }
         else {

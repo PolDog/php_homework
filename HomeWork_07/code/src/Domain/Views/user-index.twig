@@ -1,0 +1,20 @@
+<p>Список пользователей в хранилище</p>
+<a href="/user/edit"></a>
+<ul id="navigation">
+	{% for user in users %}
+		<li>
+			<a href="/user/show/?id={{user.getUserId()}}">
+				{{ user.getUserName() }}
+				{{ user.getUserLastName() }}. День рождения:
+				{{ user.getUserBirthday() | date('d.m.Y') }}
+			</a>
+			<!-- <li>{{ user.getUserName() }} {{ user.getUserLastName() }}. День рождения: {{ user.getUserBirthday() | date('d.m.Y') }}</li>-->
+
+		</li>
+	{% endfor %}
+
+	<!--<p><input type="submit" name="user_add" value="Добавить"></p>-->
+</ul>
+<form action="/user/addUser/" method="post">
+	<p><input type="submit" name="user_add" value="Добавить"></p>
+</form>

@@ -1,0 +1,34 @@
+<p>
+	пользователь в хранилище
+</p>
+<form action="/user/updateInfo/" method="post">
+	<p>
+		{# <label for="user_id">id пользователя:</label> #}
+		<input size="3" type="hidden" readonly name="user_id" value={{ user.getUserId()}} getusername() }}>
+	</p>
+	<p>
+		<label for="user-login">Имя:</label>
+		<input id="user-login" type="text" name="user_name" value={{ user.getUserName() }}>
+	</p>
+	<p>
+		<label for="user-login">Фамилия:
+		</label>
+		<input id="user-login" type="text" name="user_lastname" value={{ user.getUserLastName() }}>
+	</p>
+	<p>
+		<label for="user-login">
+			День рождения:
+		</label>
+		<input id="user-login" type="text" name="user_birthday" value={{ user.getUserBirthday() | date('d.m.Y') }}>
+	</p>
+	<p><input type="submit" value="Сохранить изменения"></p>
+
+</form>
+<form action="/user/delete/" method="post">
+	<p>
+	<input type="submit" name="user_delete" value="удалить">
+	</p>
+    <p>
+	<input type="hidden" name="user_id" value="{{ user.getUserId()}}">
+	</p>
+</form

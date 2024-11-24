@@ -1,0 +1,26 @@
+<p>
+	пользователь в хранилище
+</p>
+<form action="/user/addUser/" method="post">
+	<p>
+		{# <label for="user_id">id пользователя:</label> #}
+		<input size="3" type="hidden" readonly name="user_id">
+	</p>
+	<p>
+		<label for="user-name">Имя:</label>
+		<input id="user-name" type="text" name="name">
+	</p>
+	<p>
+		<label for="user-lastname">Фамилия:
+		</label>
+		<input id="user-lastname" type="text" name="lastname">
+	</p>
+	<p>
+		<label for="user-birthday">
+			День рождения:
+		</label>
+		<input id="user-birthday" type="text" name="birthday">
+	</p>
+	<p><input type="submit" name="add" value="Добавить пользователя"></p>
+</form>
+

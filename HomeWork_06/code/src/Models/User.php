@@ -156,10 +156,7 @@ class User {
     public function updateUser(array $userDataArray,int $user_id): void{
         // print_r($userDataArray);
         $sql = "UPDATE users SET user_name = '$userDataArray[user_name]' Where id_user={$user_id}";
-        
         $handler = Application::$storage->get()->exec($sql);
-        
-        
     }
 
     public static function deleteFromStorage(int $user_id) : void {
